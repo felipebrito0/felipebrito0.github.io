@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Portifólio - Felipe Brito</title>
+  </head>
+  <body>
+    <div class="particulas"></div>
+    <nav class="navegacao">
+      <ul class="menu">
+        <li><a href="#início" class="menu-link">Início</a></li>
+        <li><a href="#Sobre" class="menu-link">Sobre</a></li>
+        <li><a href="#Projetos" class="menu-link">Projetos</a></li>
+        <li><a href="#Contatos" class="menu-link">Contatos</a></li>
+      </ul>
+      </nav>
+      <main id="Início" class="cabecalho">
+          <img
+            src="img/perfil.jpg"
+            alt="Foto de Felipe Brito"
+            class="foto-perfil"
+          />
+          <h1>Felipe Brito</h1>
+          <p class="cabecalho-sub-titulo">Engenheiro da Computação</p>
+      </main>
+      <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+          <p class="sobre-paragrafo">
+            Estudante de Engenharia da Computação em busca de oportunidades para
+            aplicar e expandir meus conhecimentos em tecnologia e
+            desenvolvimento
+          </p>
+        </div>
+      </section>
+      <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus projetos</h2>
+        <div class="projetos-caixa">
+          <div class="projetos-card">
+            <img
+              src="img/loja de carros.jpg"
+              alt="Projeto 1"
+              class="projetos-imagem"
+            />
+            <div class="caixa-textos-projeto">
+            <h3 class="info-projetos">Loja de carros</h3>
+            <p class="paragrafo-projetos">
+              Plataforma online elegante e dinâmica, com visual adaptável a
+              qualquer dispositivo e transições suaves, perfeita para exibir e
+              comercializar automóveis.
+            </p>
+            </div>
+          </div>
+
+          <div class="projetos-card">
+            <img
+              src="img/página de viagens.jpg"
+              alt="Projeto 2"
+              class="projetos-imagem"
+            />
+            <div class="caixa-textos-projeto">
+            <h3 class="info-projetos">Página de viagens</h3>
+            <p class="paragrafo-projetos">
+              Sistema de viagens moderno e interativo, com layout responsivo e
+              transições suaves, criado para agências e negócios que buscam
+              oferecer experiências de viagem marcantes online.
+            </p>
+            </div>
+          </div>
+
+          <div class="projetos-card">
+            <img
+              src="img/Microsoft.jpg"
+              alt="Projeto 3"
+              class="projetos-imagem"
+            />
+            <div class="caixa-textos-projeto">
+            <h3 class="info-projetos">Microsoft</h3>
+            <p class="paragrafo-projetos">
+              Portal moderno e intuitivo, com design responsivo e animações
+              suaves, desenvolvido para apresentar produtos e serviços da
+              Microsoft de forma envolvente e acessível em qualquer dispositivo.
+            </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em contato</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+          <div class="grupo-form">
+            <input placeholder="Nome" class="campo-form" id="nome" />
+          </div>
+          <div class="grupo-form">
+            <textarea
+              class="campo-form"
+              placeholder="Digite sua mensagem" rows="6" id="mensagem"
+            ></textarea>
+          </div>
+          <button type="submit" class="botao-form">Enviar WhatsApp</button>
+        </form>
+      </section>
+    </nav>
+    <script>
+  function enviarWhats(event) {
+    event.preventDefault();
+
+    const nome = document.getElementById('nome').value;
+    const mensagem = document.getElementById('mensagem').value;
+    const telefone = '5519986065834';
+
+    const texto = `Olá, me chamo ${nome}, Vi seu portfólio e me interessei pelo seu perfil. Podemos conversar sobre uma oportunidade?\n\n${mensagem}`;
+    const msgformatada = encodeURIComponent(texto);
+
+    const url = `https://wa.me/${telefone}?text=${msgformatada}`;
+
+    window.open(url, '_blank');
+  }
+</script>
+
+  </body>
+</html>
