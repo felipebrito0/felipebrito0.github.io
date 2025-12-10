@@ -151,7 +151,7 @@ h1 {
 }
 
 .projetos-imagem {
-  height: 500px;
+  height: 400px;
   width: 100%;
   object-fit: cover;
 }
@@ -251,3 +251,4 @@ h1 {
     transform: translateY(-20px);
   }
 }
+
